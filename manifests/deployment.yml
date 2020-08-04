@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: girlenenspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: girlenenspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: girlenenspipelinesjavascriptdocker 
+          image: domicioamcontainerregistry.azurecr.io/girlenenspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
